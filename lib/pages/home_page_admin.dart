@@ -49,7 +49,7 @@ class HomePageAdmin extends StatelessWidget {
             ),
             const WelcomeCard(
               verified: Icons.verified_rounded,
-              jobTitle: 'TRAINER',
+              jobTitle: 'ADMIN',
               profilePath: 'assets/images/person1.png',
               fname: 'Hemant',
               lname: 'Kamat',
