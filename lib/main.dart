@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:mentor_map/pages/intro_page.dart';
+import '../pages/intro_page.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
