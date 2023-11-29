@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:mentor_map/pages/intro_page.dart';
-import 'package:mentor_map/pages/trainer_page.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -23,8 +22,8 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.dark,
         useMaterial3: true,
       ),
-      // home: const IntroPage(),
-      home: const TrainerPage(),
+      home: const IntroPage(),
+      // home: const TrainerPage(),
     );
   }
 }
