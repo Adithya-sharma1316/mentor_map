@@ -18,7 +18,7 @@ class _ChatPageState extends State<ChatPage> {
       length: 3,
       child: Scaffold(
         appBar: AppBar(
-          leading: Icon(Icons.abc),
+          leading: const Icon(Icons.chat_rounded),
           title: const Text(
             'MentorMap',
             style: TextStyle(fontWeight: FontWeight.w500),
