@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:mentor_map/pages/home_page_admin.dart';
 import 'package:mentor_map/pages/signup_page.dart';
 import 'package:mentor_map/themes/themes.dart';
 import 'package:mentor_map/widgets/cta_buton.dart';
 import 'package:mentor_map/widgets/text_button_login.dart';
+
+import 'home_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -67,7 +68,7 @@ class _LoginPageState extends State<LoginPage> {
                         GestureDetector(
                             onTap: () {
                               Navigator.of(context).push(MaterialPageRoute(
-                                  builder: (cntext) => const HomePageAdmin()));
+                                  builder: (cntext) => const HomePage()));
                             },
                             child: const CTAButton(text: 'Sign In')),
                         const SizedBox(
