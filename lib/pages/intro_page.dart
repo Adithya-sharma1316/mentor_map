@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
-import 'package:mentor_map/pages/login_page.dart';
 import 'package:mentor_map/widgets/cta_buton.dart';
+
+import 'login_page.dart';
 
 class IntroPage extends StatefulWidget {
   const IntroPage({super.key});
@@ -18,8 +20,8 @@ class _IntroPageState extends State<IntroPage> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            const SizedBox(
-              height: 50,
+            SizedBox(
+              height: 45.h,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -34,11 +36,12 @@ class _IntroPageState extends State<IntroPage> {
               ],
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 10.0, right: 10, top: 10),
-              child: Lottie.asset('assets/lottie/ani1.json'),
+              padding: EdgeInsets.only(left: 10.0.w, right: 10.w, top: 10.h),
+              child: Lottie.asset('assets/lottie/ani1.json',
+                  height: 380.h, width: 390.w),
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 50, right: 50),
+              padding: EdgeInsets.only(left: 50.h, right: 50.h),
               child: Text(
                 '"Ready to embark on your learning adventure ?"',
                 style: GoogleFonts.notoSerifDisplay(
@@ -48,8 +51,8 @@ class _IntroPageState extends State<IntroPage> {
                 textAlign: TextAlign.center,
               ),
             ),
-            const SizedBox(
-              height: 30,
+            SizedBox(
+              height: 30.sp,
             ),
             GestureDetector(
               onTap: () => Navigator.of(context).push(MaterialPageRoute(
@@ -59,9 +62,9 @@ class _IntroPageState extends State<IntroPage> {
                 text: 'Get Started',
               ),
             ),
-            const Padding(
-              padding: EdgeInsets.all(8.0),
-              child: Text('Terms & Conditions apply'),
+            Padding(
+              padding: const EdgeInsets.all(8.0).w,
+              child: const Text('Terms & Conditions apply'),
             )
           ],
         ),

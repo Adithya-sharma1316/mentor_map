@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:mentor_map/pages/student_page.dart';
+import 'package:mentor_map/student/student_page.dart';
 import 'package:mentor_map/themes/themes.dart';
 import 'package:mentor_map/widgets/cta_buton.dart';
 import 'package:mentor_map/widgets/text_button_login.dart';
@@ -25,11 +26,12 @@ class SignUpPage extends StatelessWidget {
                   style: TextStyle(fontWeight: FontWeight.w200),
                 )),
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
-                  child: Image.asset('assets/images/login_signup.png'),
+                  padding: const EdgeInsets.fromLTRB(10, 0, 10, 0).w,
+                  child: Image.asset('assets/images/login_signup.png',
+                      height: 380.h, width: 390.w),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(left: 10, right: 10),
+                  padding: const EdgeInsets.only(left: 10, right: 10).w,
                   child: Center(
                     child: Column(
                       children: [
@@ -40,43 +42,41 @@ class SignUpPage extends StatelessWidget {
                               fontStyle: FontStyle.italic,
                               fontWeight: FontWeight.w900),
                         ),
-                        const SizedBox(
-                          height: 10,
+                        SizedBox(
+                          height: 10.h,
                         ),
                         const LoginBtn1(
                           hintText: 'Phone number or E-mail',
                           obscureText: false,
                         ),
-                        const SizedBox(
-                          height: 10,
+                        SizedBox(
+                          height: 10.h,
                         ),
                         const LoginBtn1(
                           hintText: 'Password',
                           icon: Icon(Icons.lock_outline_rounded),
                           obscureText: true,
                         ),
-                        const SizedBox(
-                          height: 10,
+                        SizedBox(
+                          height: 10.h,
                         ),
                         const LoginBtn1(
                           hintText: 'Confirm Password',
                           icon: Icon(Icons.lock_outline_rounded),
                           obscureText: true,
                         ),
-                        const SizedBox(
-                          height: 10,
+                        SizedBox(
+                          height: 10.h,
                         ),
                         GestureDetector(
-                          onTap: (){
+                          onTap: () {
                             Navigator.of(context).push(MaterialPageRoute(
-                                  builder: (cntext) => const StudentPage()));
-
+                                builder: (cntext) => const StudentPage()));
                           },
-                          child: const CTAButton(
-                            text: 'Signup'),
+                          child: const CTAButton(text: 'Signup'),
                         ),
-                        const SizedBox(
-                          height: 10,
+                        SizedBox(
+                          height: 10.h,
                         ),
                         const Divider(
                           color: grey,

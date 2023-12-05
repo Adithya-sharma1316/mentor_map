@@ -62,8 +62,8 @@ class ProfilePage extends StatelessWidget {
                   Icons.lock_rounded,
                   size: 30,
                 ),
-                title: Text('Change Password'),
-                subtitle: Text('Must be 10 characters long'),
+                title: Text('Change password'),
+               
                 trailing: Icon(Icons.edit),
               ),
             ],

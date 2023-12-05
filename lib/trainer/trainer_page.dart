@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:google_fonts/google_fonts.dart';
+
 import '../themes/themes.dart';
 import '../widgets/welcome_card.dart';
 import '../widgets/cus_app_bar.dart';
@@ -19,27 +19,8 @@ class _TrainerPageState extends State<TrainerPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: SpeedDial(
-        spaceBetweenChildren: 10,
-        iconTheme: const IconThemeData(size: 30, color: black),
-        buttonSize: const Size(0, 65),
-        backgroundColor: yellow,
-        icon: Icons.interests_rounded,
-        childrenButtonSize: const Size(65, 60),
-        children: [
-          SpeedDialChild(
-              labelStyle: const TextStyle(
-                  fontSize: 20, color: black, fontWeight: FontWeight.w400),
-              labelBackgroundColor: yellow,
-              backgroundColor: yellow,
-              child: const Icon(
-                Icons.chat_rounded,
-                size: 30,
-                color: black,
-              ),
-              label: 'Contact'),
-        ],
-      ),
+      
+
       body: SingleChildScrollView(
         child: Column(
           children: [

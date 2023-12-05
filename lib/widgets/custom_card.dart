@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mentor_map/themes/themes.dart';
 
 class CustomCard extends StatelessWidget {
@@ -22,12 +23,12 @@ class CustomCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(right: right, left: left),
+      padding: EdgeInsets.only(right: right.w, left: left.w),
       child: Container(
         width: width,
         height: height,
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.all(Radius.circular(radius)),
+          borderRadius: BorderRadius.all(Radius.circular(radius.r)),
           color: color,
         ),
         child: child,

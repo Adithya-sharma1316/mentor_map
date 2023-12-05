@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CusPopUpMenu extends StatefulWidget {
   const CusPopUpMenu(
@@ -22,7 +23,7 @@ class _CusPopUpMenuState extends State<CusPopUpMenu> {
     return Padding(
       padding: EdgeInsets.only(top: widget.top, right: widget.right),
       child: PopupMenuButton(
-        constraints: const BoxConstraints(minWidth: 130),
+        constraints: const BoxConstraints(minWidth: 130).w,
         icon: Icon(widget.icon, size: widget.iconSize),
         itemBuilder: (BuildContext context) => [
           const PopupMenuItem(

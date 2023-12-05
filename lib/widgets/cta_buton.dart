@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mentor_map/themes/themes.dart';
 
 class CTAButton extends StatelessWidget {
@@ -8,14 +9,15 @@ class CTAButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 20, right: 20),
+      padding: const EdgeInsets.only(left: 20, right: 20).w,
       child: Container(
-        height: 60,
-        decoration: const BoxDecoration(
+        height: 60.h,
+        width: 390.r,
+        decoration: BoxDecoration(
           color: bluePrimaryButtonColor,
           borderRadius: BorderRadiusDirectional.horizontal(
-            end: Radius.circular(40),
-            start: Radius.circular(40),
+            end: const Radius.circular(40).r,
+            start: const Radius.circular(40).r,
           ),
         ),
         child: Center(

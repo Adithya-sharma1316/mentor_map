@@ -1,24 +1,36 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../themes/themes.dart';
-import '../widgets/welcome_card.dart';
-import '../widgets/cus_app_bar.dart';
 import '../widgets/custom_card.dart';
-
+import '../widgets/pop_menu.dart';
 import '../widgets/tabs_4.dart';
+import '../widgets/welcome_card.dart';
 
-class TrainerPage extends StatefulWidget {
-  const TrainerPage({super.key});
+class StudentPage extends StatelessWidget {
+  const StudentPage({super.key});
 
-  @override
-  State<TrainerPage> createState() => _TrainerPageState();
-}
-
-class _TrainerPageState extends State<TrainerPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        titleSpacing: 25.w,
+        automaticallyImplyLeading: false,
+        title: Text(
+          'MentorMap',
+          style: GoogleFonts.notoSerifDisplay(
+              fontSize: 30,
+              fontStyle: FontStyle.italic,
+              fontWeight: FontWeight.w900),
+        ),
+        actions: [
+          Padding(
+            padding: EdgeInsets.only(right: 5.w),
+            child: const CusPopUpMenu(icon: Icons.menu),
+          )
+        ],
+      ),
       floatingActionButton: SpeedDial(
         spaceBetweenChildren: 10,
         iconTheme: const IconThemeData(size: 30, color: black),
@@ -37,29 +49,37 @@ class _TrainerPageState extends State<TrainerPage> {
                 size: 30,
                 color: black,
               ),
-              label: 'Contact'),
+              label: 'Chat'),
+          SpeedDialChild(
+              labelStyle: const TextStyle(
+                  fontSize: 20, color: black, fontWeight: FontWeight.w400),
+              labelBackgroundColor: yellow,
+              backgroundColor: yellow,
+              child: const Icon(
+                Icons.qr_code_rounded,
+                size: 30,
+                color: black,
+              ),
+              label: 'Scan'),
         ],
       ),
       body: SingleChildScrollView(
         child: Column(
           children: [
-            const SizedBox(height: 50),
-            const CusAppBar(),
             const SizedBox(
-              height: 30,
+              height: 10,
             ),
             //Welcome card
             const WelcomeCard(
-              verified: Icons.verified_rounded,
-              jobTitle: 'TRAINER',
+              verified: Icons.school_rounded,
+              jobTitle: 'Student',
               profilePath: 'assets/images/person1.png',
-              fname: 'Hemant',
-              lname: 'Kamat',
+              fname: 'Aditya',
+              lname: 'Sharma',
             ),
             const SizedBox(
               height: 20,
             ),
-
             //TABS
             const Tabs4(
               tab1: 'Location',
@@ -70,10 +90,10 @@ class _TrainerPageState extends State<TrainerPage> {
             const SizedBox(
               height: 20,
             ),
-            //location card
+            //Ongoing and upcoming card wrapper
             CustomCard(
-              width: 380,
-              height: 750,
+              width: 380.w,
+              height: 900.h,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -81,8 +101,8 @@ class _TrainerPageState extends State<TrainerPage> {
                     height: 30,
                   ),
                   CustomCard(
-                    height: 320,
-                    width: 370,
+                    height: 400.h,
+                    width: 500.w,
                     color: black,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,

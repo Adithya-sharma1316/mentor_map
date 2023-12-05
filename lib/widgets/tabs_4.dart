@@ -15,36 +15,44 @@ class Tabs4 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
-        CustomCard(
-            left: 20,
-            right: 5,
-            width: 85,
-            height: 50,
-            child: Center(child: Text(tab1))),
-        CustomCard(
-            left: 0,
-            right: 5,
-            width: 85,
-            height: 50,
-            child: Center(child: Text(tab2))),
-        CustomCard(
-            left: 0,
-            right: 5,
-            width: 85,
-            height: 50,
-            child: Center(child: Text(tab3))),
         CustomCard(
             left: 0,
             right: 0,
             width: 85,
             height: 50,
-            child: Center(child:Row(
+            child: Center(child: Text(tab1))),
+        CustomCard(
+            left: 0,
+            right: 0,
+            width: 85,
+            height: 50,
+            child: Center(child: Text(tab2))),
+        CustomCard(
+            left: 0,
+            right: 0,
+            width: 85,
+            height: 50,
+            child: Center(child: Text(tab3))),
+        CustomCard(
+          left: 0,
+          right: 0,
+          width: 85,
+          height: 50,
+          child: Center(
+            child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [Padding(
-                padding: const EdgeInsets.only(left:8.0),
-                child: Text(tab4),
-              ),const Icon(Icons.expand_more_rounded)],),),),
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 8.0),
+                  child: Text(tab4),
+                ),
+                const Icon(Icons.expand_more_rounded)
+              ],
+            ),
+          ),
+        ),
       ],
     );
   }
